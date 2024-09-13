@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+#shape {
+    width: 400px;
+    height: 300px;
+    background-color: blue; /* Couleur du rectangle */
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden; /* Cache tout ce qui dépasse du cercle */
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    display: none; /* Masquer le message par défaut */
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#shape {
+    width: 400px;
+    height: 300px;
+    background-color: blue; /* Couleur du rectangle */
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden; /* Cache tout ce qui dépasse du cercle */
+}
+
+#shape.rotate {
+    animation: rotate 2s linear infinite;
+}
